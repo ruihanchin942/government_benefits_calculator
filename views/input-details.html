@@ -5,20 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input Details</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/input-details.css">
   </head>
+  
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="input-details">Input Polulation Details</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header class="main-header">
+        <nav class="main-header__nav">
+          <ul class="main-header__nav-list">
+            <li class="main-header__nav-item"><a href="/">Home</a></li>
+            <li class="main-header__nav-item"><a class="active" href="/admin/input-details">Input Polulation Details</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <main>
-      <form action="benefits" method="POST">
-        <input type="text" name="title" />
+      <form class="form" action="/admin/benefits" method="POST">
+        <div class="form-control">
+            <label for="details">Enter Details:</label>
+            <input type="text" name="details" id="details"/>
+        </div>
+        
         <button type="submit">Calculate Benefits</button>
       </form>
     </main>
