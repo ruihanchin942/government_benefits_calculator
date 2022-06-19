@@ -5,13 +5,16 @@ const rootDir = require('../util/path')
 
 const router = express.Router();
 
+const details = [];
+
 router.get('/input-details', (req, res, next) => {
   res.sendFile(path.join(rootDir, 'views', 'input-details.html'));
 });
 
 router.post('/benefits', (req, res, next) => {
-  console.log(req.body);
+  details.push({detail: req.body.detail });
   res.redirect('/');
 });
 
-module.exports = router;
+exports.routes = router;
+exports.details = details;
