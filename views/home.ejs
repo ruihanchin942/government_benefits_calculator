@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body>
+    <%- include ('includes/navigation.ejs') %>
+
+    <main>
+      <h1>Government Benefits Calculator</h1>
+      <b>Boundary Limits: </b>
+      <p>
+        Age: 1 &lt;= x &lt;= 70 <br />
+        Is Citizen: 1 denotes Citizen and 0 denotes foreigner <br />
+        Floor: 1 &lt;= x &lt;= 15 <br />
+        Unit: 200 1 &lt;= x &lt;= 400 <br />
+        Postal Code: 6 digits number <br />
+        Income: 0 &lt;= x &lt;= 10000 <br />
+      </p>
+      <br/>
+      <br/>
+
+      <b>Output:</b>
+        <% for (let i = 1; i <= 10; i++){ %>
+            <br/>
+            <div>
+                <%= i %>:
+            </div>
+        <% } %>
+      <!-- <% if (benefits.length > 0) { %>  -->
+        
+        <!-- <% } else { %>
+            <h2>No Benefits Calculated!</h2>
+            <% } %> -->
+    </main>
+  </body>
+</html>

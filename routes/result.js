@@ -8,8 +8,15 @@ const adminData = require('./admin')
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-    console.log(adminData.details)
-    res.sendFile(path.join(rootDir, 'views', 'home.html'));
+    const benefits = adminData.benefits
+    res.render('home', {
+        benefits: benefits,
+        pageTitle: 'Home',
+        path:'/',
+        hasDetails: benefits.length > 0,
+        activeHome: true,
+        productCSS: true
+    })
   });
 
 module.exports = router
