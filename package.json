@@ -4,7 +4,7 @@
   "description": "coding project assessment",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon --exec \"mocha -R min\"",
     "start": "nodemon app.js"
   },
   "author": "Chin Ruihan",

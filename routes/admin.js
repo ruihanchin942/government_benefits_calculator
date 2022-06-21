@@ -13,7 +13,6 @@ router.get('/input-details', (req, res, next) => {
     path: '/admin/input-details',
     formsCSS: true,
     productCSS: true,
-    activeAddProduct: true,
   });
 });
 
@@ -34,9 +33,9 @@ router.post('/benefits', (req, res, next) => {
       population.push({
         age: parseInt(data[0]),
         isCitizen: data[1],
-        floor: data[2],
-        unit: data[3],
-        postal: data[4],
+        floor: parseInt(data[2]),
+        unit: parseInt(data[3]),
+        postal: parseInt(data[4]),
         income: parseInt(data[5]),
       });
     }
@@ -126,7 +125,7 @@ router.post('/benefits', (req, res, next) => {
       benefitList.push(benefit);
     }
 
-  console.log(benefitList);
+  //console.log(benefitList);
   //details.push({detail: req.body.details });
   res.redirect('/');
 });
