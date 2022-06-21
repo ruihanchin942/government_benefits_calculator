@@ -26,17 +26,17 @@
       <br/>
 
       <b>Output:</b>
-        <% for (let i = 1; i <= 10; i++){ %>
-            <br/>
-            <div>
-                <%= i %>:
-            </div>
-        <% } %>
-      <!-- <% if (benefits.length > 0) { %>  -->
         
-        <!-- <% } else { %>
+      <% if (benefitList.length > 0) { %>
+        <% for (let i = 0; i <= benefitList.length-1; i++){ %>
+          <br/>
+          <div>
+              <%= i+1 %>: <%= benefitList[i] %>
+          </div>
+      <% } %>
+        <% } else { %>
             <h2>No Benefits Calculated!</h2>
-            <% } %> -->
+            <% } %>
     </main>
   </body>
 </html>

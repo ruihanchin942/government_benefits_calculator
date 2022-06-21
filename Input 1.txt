@@ -1,4 +1,4 @@
-3
+4
 Age,Is Citizen,Floor,Unit,Postal code,Income per month
 70,1,2,204,750347,5000
 39,1,14,209,750348,3500
